@@ -5,10 +5,12 @@ import './App.css';
 import Navbar from "./components/navbar"
 import Score from "./components/score"
 // import GameRules from "./components/gamerules"
+import Jumbotron from "./components/jumbotron"
 
 function App() {
   return (
     <div>
+    <Jumbotron />
     <Navbar />
     <Score />
     </div>
