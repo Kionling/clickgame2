@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 import Score from "./components/score";
 // import GameRules from "./components/gamerules"
 import Jumbotron from "./components/jumbotron";
+import Footer from "./components/footer"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Jumbotron />
       <Score />
+      <Footer />
     </div>
   );
 }

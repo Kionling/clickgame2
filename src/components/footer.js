@@ -3,14 +3,14 @@ import React from "react";
 function Footer() {
   return (
     <div class="card">
-      <h5 class="card-header">Featured</h5>
+      <h5 class="card-header">Links</h5>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
+        <h5 class="card-title">Here is the link to my profile!</h5>
         <p class="card-text">
-          With supporting text below as a natural lead-in to additional content.
+          Contact me!
         </p>
-        <a href="#" class="btn btn-primary">
-          Go somewhere
+        <a href="https://github.com/Kionling" class="btn btn-primary">
+            Github
         </a>
       </div>
     </div>
