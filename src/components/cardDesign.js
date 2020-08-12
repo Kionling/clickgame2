@@ -1,7 +1,9 @@
 import React from "react"
 
-function Cards(){
+function CardDesign(){
     <div className="card">
-        
+
     </div>
 }
+
+export default CardDesign
