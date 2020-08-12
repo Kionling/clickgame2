@@ -8,13 +8,16 @@ class App extends React.Component {
   state = {
     Images: [],
     clicks: [],
-    score: [],
+    score: 0,
+    topScore: 0
   };
+  
   //need counter
   counter(){
-      
+    
   }
   //need tracker for image clicks
+
   //need renderer FOR NEW component states
 }
 
