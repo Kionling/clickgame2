@@ -10,7 +10,7 @@ function Score(props) {
   return (
     <div className="container">
       <h4 style={Styles.Score}>
-        Score:<span className={Styles.Score}></span>
+        Score:<span className={Styles.Score}>{props.score}</span>
       </h4>
     </div>
   );
