@@ -1,6 +1,6 @@
 import React from "react"
 
-function CardDesign(){
+function CardDesign(props){
     <div className="card">
 
     </div>
