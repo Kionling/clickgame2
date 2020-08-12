@@ -8,7 +8,7 @@ import GameRules from "./components/gamerules"
 
 function App() {
   return (
-    
+    <Score />
   );
 }
 
