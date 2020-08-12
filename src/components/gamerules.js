@@ -11,6 +11,9 @@ class App extends React.Component {
     score: [],
   };
   //need counter
+  counter(){
+      
+  }
   //need tracker for image clicks
   //need renderer FOR NEW component states
 }
