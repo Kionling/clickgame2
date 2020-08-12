@@ -11,12 +11,18 @@ class App extends React.Component {
     score: 0,
     topScore: 0
   };
-  
+
   //need counter
   counter(){
-    
+    //conditionals for click images
+    if(this.state.clicks){
+        
+    }
+    //how to track images
+
   }
   //need tracker for image clicks
+  //need image randomizer
 
   //need renderer FOR NEW component states
 }
