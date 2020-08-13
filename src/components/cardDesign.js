@@ -4,7 +4,7 @@ function CardDesign(props){
 return(
     <div className="card">
         <div className="container">
-         <img src={props.image}></img>
+         <img src={props.image} onClick={() => {}}/>
         </div>
     </div>
 );
