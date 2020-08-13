@@ -11,6 +11,7 @@ function Score(props) {
     <div className="container">
       <h4 style={Styles.Score}>
         Score:<span className={Styles.Score}>{props.score}</span>
+        Top Score:<span className={Styles.Score}>{props.topscore}</span>
       </h4>
     </div>
   );

@@ -65,7 +65,7 @@ class App extends React.Component {
         <Score score={this.state.score} />
         <div className="container">
           {Images.map(CardD => (
-            <CardDesign key={CardD.id}id={CardD.id} image={CardD.image} random={this.random} counter={this.counter}/>
+            <CardDesign key={CardD.id}id={CardD.id} image={CardD.image} random={this.random} counter={this.counter} topScore={this.topScore()}/>
           ))}
         </div>
     </div>   
