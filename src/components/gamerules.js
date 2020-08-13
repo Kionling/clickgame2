@@ -31,9 +31,9 @@ class App extends React.Component {
   //need tracker for image clicks
   //need image randomizer
   random() {
-    const image = this.state.images;
+    const image = this.state.Images;
     this.setState({
-      images: image.map((randomImg) => {
+      Images: image.map((randomImg) => {
         if (Math.random() > 1) {
           return 2;
         }
@@ -55,7 +55,7 @@ class App extends React.Component {
         <Score score={this.state.score} />
         <div className="container">
           {Images.map(CardD => (
-            <CardDesign id={CardD.id} image={CardD.image} />
+            <CardDesign id={CardD.id} image={CardD.image} random={this.random} />
           ))}
         </div>
     </div>   
