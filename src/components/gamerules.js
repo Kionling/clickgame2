@@ -3,6 +3,8 @@ import CardDesign from "./cardDesign";
 import Navbar from "./navbar";
 import Images from "../img.json";
 import Score from "./score";
+import Footer from "./footer";
+import Jumbotron from "./jumbotron";
 
 class App extends React.Component {
   //need state
@@ -14,7 +16,9 @@ class App extends React.Component {
   };
 
   //need counter
-  counter() {}
+  counter() {
+      //here make counter
+  }
   //conditionals for click images
 
   //how to track images
@@ -41,7 +45,10 @@ class App extends React.Component {
   render() {
     return (
         <Navbar />
-        <Score />
+        <Jumbotron />
+        <Score 
+        score={this.state.score}
+        />
       <div className="row">
 
         {images.map(CardDesign => {
@@ -50,8 +57,8 @@ class App extends React.Component {
             image={CardDesign.image}
             />
         })}
-        
       </div>
+      <Footer />
     );
   }
 }
