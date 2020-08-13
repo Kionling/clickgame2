@@ -3,8 +3,8 @@ import CardDesign from "./cardDesign";
 import Navbar from "./navbar";
 import Images from "../img.json";
 import Score from "./score";
-import Footer from "./footer";
-import Jumbotron from "./jumbotron";
+// import Footer from "./footer";
+// import Jumbotron from "./jumbotron";
 
 class App extends React.Component {
   //need state
@@ -16,12 +16,13 @@ class App extends React.Component {
   };
 
   //need counter
-  counter = () => {
-      if(this.state.clicks === 2){
-          return this.state.score + 1
-      }
-      else{
-          this.setState({score: 0})
+  counter = (images) => {
+      if(this.state.clicks.indexOf(images) === -1 ){
+          this.setState({
+              score: this.state.score + 1
+          })
+      } else {
+          console.log("farley")
       }
   }
   //conditionals for click images
@@ -34,11 +35,12 @@ class App extends React.Component {
     const image = this.state.CardImages;
     this.setState({
       Images: image.map((randomImg) => {
-        if (Math.random() > 1) {
-          return 2;
+          let random = Math.random()
+        if (random > .5) {
+          return 1;
         }
-        if (Math.random() < 1) {
-          return -2;
+        if (random < .5) {
+          return -1;
         } else {
           return 0;
         }
@@ -46,16 +48,20 @@ class App extends React.Component {
     });
   }
 
+
+  componentDidMount()
+  {
+    this.setState({ Images });
+  }
   //need renderer FOR NEW component states
   render() {
     return (
     <div>
-        <Navbar />
-        <Jumbotron />
+       
         <Score score={this.state.score} />
         <div className="container">
           {Images.map(CardD => (
-            <CardDesign id={CardD.id} image={CardD.image} random={this.random} />
+            <CardDesign key={CardD.id}id={CardD.id} image={CardD.image} random={this.random} counter={this.counter}/>
           ))}
         </div>
     </div>   
