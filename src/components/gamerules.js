@@ -13,14 +13,31 @@ class App extends React.Component {
   };
 
   //need counter
-  counter(card) {
-    //conditionals for click images
-    if (this.state.clicks) {
-    }   
-    //how to track images
+  counter(){
+
   }
+    //conditionals for click images
+    
+    //how to track images
+  
   //need tracker for image clicks
   //need image randomizer
+  random(){
+    const image = this.state.images 
+    this.setState({
+        images: image.map( randomImg => {
+            if (Math.random() > 1){
+                return 2
+            }
+            if(Math.random() < 1){
+                return -2
+            }
+             else {
+                return 0 
+            }
+        })
+    })
+  }
 
   //need renderer FOR NEW component states
   render() {
