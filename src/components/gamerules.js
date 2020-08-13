@@ -23,7 +23,7 @@ class App extends React.Component {
           })
       } else {
           console.log("farley")
-            this.state.score - this.state.score
+            this.setState({score: 0})
       }
   }
   //conditionals for click images
