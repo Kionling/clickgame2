@@ -9,7 +9,7 @@ import Jumbotron from "./jumbotron";
 class App extends React.Component {
   //need state
   state = {
-    Images: [],
+    CardImages: [],
     clicks: [],
     score: 0,
     topScore: 0,
@@ -30,8 +30,8 @@ class App extends React.Component {
 
   //need tracker for image clicks
   //need image randomizer
-  random() {
-    const image = this.state.Images;
+  random = () =>  {
+    const image = this.state.CardImages;
     this.setState({
       Images: image.map((randomImg) => {
         if (Math.random() > 1) {
