@@ -19,11 +19,14 @@ class App extends React.Component {
   counter = (images) => {
       if(this.state.clicks.indexOf(images) === -1 ){
           this.setState({
+              clicks: [...this.state.clicks, images],
               score: this.state.score + 1
+
           })
       } else {
           console.log("farley")
             this.setState({score: 0})
+            this.setState({clicks: []})
       }
   }
   //conditionals for click images
@@ -33,14 +36,14 @@ class App extends React.Component {
   //need tracker for image clicks
   //need image randomizer
   random = () =>  {
-    const image = this.state.CardImages;
+    const image = this.state.Images;
     this.setState({
-      Images: image.map((randomImg) => {
-          let random = Math.random()
-        if (random > .5) {
+      CardImages: image.sort(randomImg => {
+          const random = Math.random()
+        if (random > .1) {
           return 1;
         }
-        if (random < .5) {
+        if (random < .1) {
           return -1;
         } else {
           return 0;
