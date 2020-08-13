@@ -16,7 +16,14 @@ class App extends React.Component {
   };
 
   //need counter
-  counter() {}
+  counter() {
+      if(this.state.clicks === 2){
+          return this.state.score + 1
+      }
+      else{
+          this.setState({score: 0})
+      }
+  }
   //conditionals for click images
 
   //how to track images
