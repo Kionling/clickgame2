@@ -9,22 +9,25 @@ class App extends React.Component {
     Images: [],
     clicks: [],
     score: 0,
-    topScore: 0
+    topScore: 0,
   };
 
   //need counter
-  counter(){
+  counter(card) {
     //conditionals for click images
-    if(this.state.clicks){
-        
-    }
+    if (this.state.clicks) {
+    }   
     //how to track images
-
   }
   //need tracker for image clicks
   //need image randomizer
 
   //need renderer FOR NEW component states
+  render() {
+      return(
+
+      );
+  }
 }
 
 export default App;
