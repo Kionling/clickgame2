@@ -16,7 +16,7 @@ class App extends React.Component {
   };
 
   //need counter
-  counter() {
+  counter = () => {
       if(this.state.clicks === 2){
           return this.state.score + 1
       }
